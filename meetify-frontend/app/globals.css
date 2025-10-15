@@ -1,0 +1,22 @@
+@import "tailwindcss";
+/* Thin, blue/gray scrollbar for the whole app */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #60a5fa; /* Tailwind blue-400 */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e7ef; /* Tailwind blue-100 */
+  border-radius: 8px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #60a5fa #e0e7ef;
+}
