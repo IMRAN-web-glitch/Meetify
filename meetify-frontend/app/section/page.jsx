@@ -9,7 +9,7 @@ const Section = () => {
     const handleInputChange = (e) => setMeetingCode(e.target.value);
 
     const validateMeetingCode = async () => {
-        const res = await fetch(`${process.env.Backend}/meeting/ + meetingCode`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_Backend}/meeting/ + meetingCode`);
         const data = await res.json();
         if (!data.valid) {
             alert("Invalid meeting code. Please try again.");
@@ -21,7 +21,7 @@ const Section = () => {
     const handleJoin = async () => {
         const isValid = await validateMeetingCode();
         if (isValid) {
-            router.push(`${process.env.Backend}/meeting/${meetingCode}`);
+            router.push(`/meeting/${meetingCode}`);
         }
     };
 
