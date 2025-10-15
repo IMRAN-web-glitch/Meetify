@@ -5,7 +5,7 @@ export default function HomePage() {
   const router = useRouter();
 
   async function createMeeting() {
-    const res = await fetch(`${process.env.Backend}/create-meeting`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_Backend}/create-meeting`);
     const data = await res.json();
     const meetingId = data.meetingId;
     router.push(`/meeting/${meetingId}`);
