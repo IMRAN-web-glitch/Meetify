@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const URL = process.env.Backend; // change to your backend when deployed
+const URL = process.env.NEXT_PUBLIC_Backend; // change to your backend when deployed
 let socket;
 
 export const initSocket = () => {
